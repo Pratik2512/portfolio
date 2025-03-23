@@ -42,11 +42,11 @@ const skills: Skill[] = [
     icon: Globe,
     description: 'HTML5, CSS3, JavaScript',
   },
-  {
-    name: 'Data Analysis',
-    icon: BarChart,
-    description: 'Data Visualization, Business Intelligence',
-  },
+  // {
+  //   name: 'Data Analysis',
+  //   icon: BarChart,
+  //   description: 'Data Visualization, Business Intelligence',
+  // },
   {
     name: 'Team Leadership',
     icon: Users,

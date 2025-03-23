@@ -22,15 +22,16 @@ const Hero = () => {
             Pratik Mohite
           </h1>
           <p className="text-xl md:text-2xl font-medium text-muted-foreground mt-2">
-            Software Engineer | Backend Developer | Tech Enthusiast
+            Software Engineer | Backend Developer | Cloud Enthusiast
           </p>
         </div>
         
         <div className="h-px w-24 bg-border mx-auto"></div>
         
         <p className="text-lg max-w-3xl mx-auto text-muted-foreground">
-          Experienced backend engineer with expertise in Node.js, Express, MongoDB, and cloud technologies. 
+          Experienced Backend Engineer with expertise in Node.js, Express, MongoDB, and Cloud technologies. 
           Passionate about building efficient, scalable solutions that solve real-world problems.
+          Embracing the power of AI and Blockchain to create innovative products.
         </p>
         
         <div className="flex flex-wrap justify-center gap-4 pt-4">
@@ -55,7 +56,7 @@ const Hero = () => {
         
         <div className="flex justify-center items-center gap-6 pt-8">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/Pratik2512"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full p-2.5 bg-muted/50 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
@@ -64,7 +65,7 @@ const Hero = () => {
             <Github size={24} />
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/pratikmohite2512/"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full p-2.5 bg-muted/50 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
@@ -73,7 +74,7 @@ const Hero = () => {
             <Linkedin size={24} />
           </a>
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:pratikmm010@gmail.com"
             className="rounded-full p-2.5 bg-muted/50 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
             aria-label="Email"
           >

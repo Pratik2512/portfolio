@@ -10,12 +10,12 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-sm text-muted-foreground">
-            © {currentYear} Your Name. All rights reserved.
+            © {currentYear} Pratik Mohite. All rights reserved.
           </div>
           
           <div className="flex items-center space-x-6">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/Pratik2512"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -24,7 +24,7 @@ const Footer = () => {
               <Github size={20} />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/pratikmohite2512/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -33,7 +33,7 @@ const Footer = () => {
               <Linkedin size={20} />
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:pratikmm010@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
               aria-label="Email"
             >

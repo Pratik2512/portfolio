@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,12 +39,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <NavLink to="/" className="font-semibold text-xl tracking-tight">
-              Portfolio
+              Pratik Mohite
             </NavLink>
           </div>
 
           {/* Desktop navigation */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex md:items-center md:justify-between md:flex-1 md:ml-10">
             <div className="flex items-center space-x-8">
               {navLinks.map((link) => (
                 <NavLink
@@ -59,10 +60,14 @@ const Navbar = () => {
                 </NavLink>
               ))}
             </div>
+            <div>
+              <ThemeToggle />
+            </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile menu button and theme toggle */}
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               type="button"

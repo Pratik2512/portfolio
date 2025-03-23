@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Hero = () => {
   return (
@@ -12,12 +13,16 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background to-background/50 -z-10" />
       
       <div className="max-w-5xl w-full mx-auto text-center space-y-8 animate-fade-in">
-        <div className="space-y-4">
+        <div className="flex flex-col items-center justify-center">
+          <Avatar className="h-32 w-32 mb-6 border-4 border-primary/20 shadow-lg">
+            <AvatarImage src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=480&q=80" alt="Pratik Mohite" />
+            <AvatarFallback className="text-2xl font-bold">PM</AvatarFallback>
+          </Avatar>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance">
-            Software Engineer
+            Pratik Mohite
           </h1>
-          <p className="text-xl md:text-2xl font-medium text-muted-foreground">
-            Backend Developer | Tech Enthusiast
+          <p className="text-xl md:text-2xl font-medium text-muted-foreground mt-2">
+            Software Engineer | Backend Developer | Tech Enthusiast
           </p>
         </div>
         

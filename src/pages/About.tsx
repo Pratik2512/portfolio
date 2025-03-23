@@ -1,4 +1,3 @@
-
 import React from 'react';
 import SkillsGrid from '../components/SkillsGrid';
 import { ArrowRight, Calendar, MapPin, Building } from 'lucide-react';
@@ -12,7 +11,7 @@ const About = () => {
           <div className="mb-12 max-w-3xl">
             <h1 className="text-3xl font-bold mb-6">About Me</h1>
             <p className="text-lg text-muted-foreground mb-4">
-              I'm a passionate backend engineer currently working at Sodales Solutions, where I focus on building robust systems with SAP HANA, XSODATA, XSJS services, RESTful APIs, and authentication management.
+              I'm Pratik Mohite, a passionate backend engineer currently working at Sodales Solutions, where I focus on building robust systems with SAP HANA, XSODATA, XSJS services, RESTful APIs, and authentication management.
             </p>
             <p className="text-lg text-muted-foreground">
               With a strong foundation in both backend and frontend technologies, I enjoy creating scalable, efficient solutions that solve real-world problems. My experience spans from developing APIs to implementing database solutions, always keeping user needs and performance in mind.

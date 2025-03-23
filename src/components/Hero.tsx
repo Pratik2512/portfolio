@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="max-w-5xl w-full mx-auto text-center space-y-8 animate-fade-in">
         <div className="flex flex-col items-center justify-center">
           <Avatar className="h-32 w-32 mb-6 border-4 border-primary/20 shadow-lg">
-            <AvatarImage src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=480&q=80" alt="Pratik Mohite" />
+            <AvatarImage src="/avatar.png" alt="Pratik Mohite" />
             <AvatarFallback className="text-2xl font-bold">PM</AvatarFallback>
           </Avatar>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance">

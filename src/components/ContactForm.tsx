@@ -9,6 +9,7 @@ const ContactForm = () => {
     const formData = new FormData(event.target);
 
     formData.append("access_key", "4580f042-cf8f-4ee4-b821-10a8a576e9d1");
+    formData.append("subject", formData.get("name") + " sent you a message");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);

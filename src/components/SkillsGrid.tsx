@@ -15,17 +15,17 @@ const skills: Skill[] = [
   {
     name: 'Backend Development',
     icon: Server,
-    description: 'Node.js, Express.js, RESTful APIs',
+    description: 'XSODATA, Node.js, Express.js, RESTful APIs',
   },
   {
     name: 'Database Management',
     icon: Database,
-    description: 'MongoDB, SAP HANA, SQL',
+    description: 'SAP HANA, SQL, MongoDB, PostgreSQL',
   },
   {
     name: 'Cloud Services',
     icon: Cloud,
-    description: 'GCP, AWS, Deployment, CI/CD',
+    description: 'GCP, AWS, Deployment, CI/CD, Docker, Jenkins',
   },
   {
     name: 'Frontend',
@@ -42,11 +42,11 @@ const skills: Skill[] = [
     icon: Globe,
     description: 'HTML5, CSS3, JavaScript',
   },
-  // {
-  //   name: 'Data Analysis',
-  //   icon: BarChart,
-  //   description: 'Data Visualization, Business Intelligence',
-  // },
+  {
+    name: 'Blockchain',
+    icon: BarChart,
+    description: 'Smart Contracts, Solidity',
+  },
   {
     name: 'Team Leadership',
     icon: Users,
@@ -55,7 +55,7 @@ const skills: Skill[] = [
   {
     name: 'Communication',
     icon: MessageSquare,
-    description: 'Technical Documentation, Knowledge Sharing',
+    description: 'Technical Documentation, Teaching, Public Speaking',
   },
 ];
 

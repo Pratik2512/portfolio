@@ -4,22 +4,22 @@ import CertificationCard from './CertificationCard';
 
 const certifications = [
   {
-    name: 'Google Cloud Associate Cloud Engineer',
+    name: 'Google Cloud Digital Leader',
     issuer: 'Google Cloud',
-    date: 'January 2023',
-    verificationUrl: 'https://www.credential.net/example',
+    date: 'October 2022',
+    // verificationUrl: 'https://www.credential.net/example',
   },
   {
     name: 'AWS Certified Solutions Architect – Associate',
     issuer: 'Amazon Web Services',
     date: 'November 2022',
-    verificationUrl: 'https://aws.amazon.com/verification',
+    // verificationUrl: 'https://aws.amazon.com/verification',
   },
   {
     name: 'React Developer Certification',
-    issuer: 'Udacity',
+    issuer: 'LinkedIn Learning',
     date: 'July 2021',
-    verificationUrl: 'https://confirm.udacity.com/example',
+    // verificationUrl: 'https://confirm.udacity.com/example',
   },
   {
     name: 'MongoDB Database Administrator',

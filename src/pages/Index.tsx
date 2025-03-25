@@ -11,7 +11,7 @@ const featuredProjects = [
     description: 'A platform for sharing educational content, allowing students and educators to collaborate effectively.',
     technologies: ['Node.js', 'Express', 'MongoDB', 'React'],
     demoUrl: 'https://tybca.netlify.app',
-    githubUrl: 'https://github.com/yourusername/sharing-app',
+    githubUrl: 'https://github.com/Pratik2512/SharingSite',
   },
   {
     title: 'CollabBridge Tech',
@@ -24,7 +24,7 @@ const featuredProjects = [
     description: 'A real-time chat application for communities, with features like channels, direct messaging, and file sharing.',
     technologies: ['Socket.io', 'Express', 'MongoDB', 'React'],
     demoUrl: 'https://collabcraze.vercel.app',
-    githubUrl: 'https://github.com/yourusername/community-chat',
+    githubUrl: 'https://github.com/Pratik2512/CommunityChat',
   },
 ];
 

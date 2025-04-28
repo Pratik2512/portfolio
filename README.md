@@ -31,7 +31,7 @@ This project showcases my skills, projects, achievements, and certifications as 
 
 ```bash
 git clone [https://github.com/Pratik2512/portfolio.git](https://github.com/Pratik2512/portfolio.git)
-cd expertise-avenue
+cd portfolio
 npm install
 # or
 yarn install

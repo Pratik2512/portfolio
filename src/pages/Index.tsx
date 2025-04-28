@@ -12,12 +12,16 @@ const featuredProjects = [
     technologies: ['Node.js', 'Express', 'MongoDB', 'React'],
     demoUrl: 'https://tybca.netlify.app',
     githubUrl: 'https://github.com/Pratik2512/SharingSite',
+    imageUrl: '/screenshots/sharing-app.png',
+    featured: true,
   },
   {
     title: 'CollabBridge Tech',
     description: 'A client project built for seamless business collaboration, featuring real-time communication and data sharing.',
     technologies: ['React', 'Node.js', 'WebSockets', 'AWS'],
     demoUrl: 'https://example.com',
+    imageUrl: '/screenshots/collabbridge.png',
+    featured: true,
   },
   {
     title: 'Community Chat App',
@@ -25,6 +29,8 @@ const featuredProjects = [
     technologies: ['Socket.io', 'Express', 'MongoDB', 'React'],
     demoUrl: 'https://collabcraze.vercel.app',
     githubUrl: 'https://github.com/Pratik2512/CommunityChat',
+    imageUrl: '/screenshots/community-chat.png',
+    featured: true,
   },
 ];
 
@@ -33,16 +39,15 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Hero />
       
-      <section className="section-padding bg-muted/30">
+      <section className="section-padding bg-gradient-to-br from-muted/40 to-background/80 py-20">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-10 text-center">
-            <h2 className="text-3xl font-bold mb-3">Featured Projects</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Here are some of the projects I've worked on recently. Take a look at what I've built.
+          <div className="mb-14 text-center">
+            <h2 className="text-4xl font-extrabold mb-4 text-primary drop-shadow-lg">Featured Projects</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
+              Here are some of the projects I've worked on recently. Each project showcases a different aspect of my skills and interests as a developer.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {featuredProjects.map((project) => (
               <ProjectCard
                 key={project.title}
@@ -51,14 +56,15 @@ const Index = () => {
                 technologies={project.technologies}
                 demoUrl={project.demoUrl}
                 githubUrl={project.githubUrl}
+                imageUrl={project.imageUrl}
+                featured={project.featured}
               />
             ))}
           </div>
-          
-          <div className="mt-12 text-center">
+          <div className="mt-16 text-center">
             <Link
               to="/projects"
-              className="inline-flex items-center gap-2 text-primary hover:underline"
+              className="inline-flex items-center gap-2 text-lg font-semibold text-primary hover:underline"
             >
               View all projects
               <ArrowRight size={16} />

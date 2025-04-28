@@ -14,14 +14,17 @@ const Hero = () => {
       
       <div className="max-w-5xl w-full mx-auto text-center space-y-8 animate-fade-in">
         <div className="flex flex-col items-center justify-center">
-          <Avatar className="h-32 w-32 mb-6 border-4 border-primary/20 shadow-lg">
+          <Avatar className="h-32 w-32 mb-6 border-4 border-primary/40 shadow-2xl animate-pulse-slow">
             <AvatarImage src="/avatar.png" alt="Pratik Mohite" />
             <AvatarFallback className="text-2xl font-bold">PM</AvatarFallback>
           </Avatar>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-balance drop-shadow-lg">
             Pratik Mohite
           </h1>
-          <p className="text-xl md:text-2xl font-medium text-muted-foreground mt-2">
+          <span className="mt-2 px-3 py-1 rounded-full bg-gradient-to-r from-primary to-secondary text-white text-lg font-semibold shadow">
+            Building scalable solutions for the future
+          </span>
+          <p className="text-xl md:text-2xl font-medium text-muted-foreground mt-4">
             Software Engineer | Backend Developer | Cloud Enthusiast
           </p>
         </div>
@@ -39,7 +42,7 @@ const Hero = () => {
             href="/resume.pdf" 
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/80 hover:scale-105 shadow-lg transition-all duration-200"
           >
             <Download size={18} />
             Resume
@@ -47,14 +50,23 @@ const Hero = () => {
           
           <a 
             href="/about" 
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-border bg-secondary hover:bg-secondary/80 transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-primary bg-secondary hover:bg-primary/20 hover:border-secondary hover:scale-105 transition-all duration-200"
           >
             Learn More
             <ArrowRight size={18} />
           </a>
         </div>
         
-        <div className="flex justify-center items-center gap-6 pt-8">
+        <div className="flex justify-center items-center gap-8 pt-8">
+          <a
+            href="mailto:pratikmohite2512@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-white/80 hover:bg-primary/90 p-3 shadow transition-colors border border-border"
+            title="Email"
+          >
+            <Mail size={22} className="text-primary" />
+          </a>
           <a
             href="https://github.com/Pratik2512"
             target="_blank"

@@ -9,6 +9,7 @@ interface ProjectCardProps {
   demoUrl?: string;
   githubUrl?: string;
   imageUrl?: string;
+  featured?: boolean;
 }
 
 const ProjectCard = ({
@@ -18,19 +19,24 @@ const ProjectCard = ({
   demoUrl,
   githubUrl,
   imageUrl,
+  featured,
 }: ProjectCardProps) => {
   return (
-    <div className="group relative overflow-hidden rounded-lg border border-border bg-card hover:shadow-md transition-all duration-300">
-      {imageUrl && (
-        <div className="relative h-48 w-full overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
-          <img
-            src={imageUrl || '/placeholder.svg'}
-            alt={title}
-            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-          />
-        </div>
-      )}
+    <div className="group relative overflow-hidden rounded-lg border border-border bg-card hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+      <div className="relative h-48 w-full overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
+        <img
+          src={imageUrl || '/placeholder.svg'}
+          alt={title}
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+        {/* Featured badge */}
+        {featured && (
+          <span className="absolute top-3 left-3 bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+            Featured
+          </span>
+        )}
+      </div>
       
       <div className="p-6">
         <h3 className="text-xl font-medium mb-2">{title}</h3>

@@ -30,7 +30,7 @@ const skills: Skill[] = [
   {
     name: 'Frontend',
     icon: Code,
-    description: 'React.js, Responsive Design',
+    description: 'React.js, Responsive Design, Vibe Coding',
   },
   {
     name: 'Version Control',
@@ -41,6 +41,11 @@ const skills: Skill[] = [
     name: 'Web Technologies',
     icon: Globe,
     description: 'HTML5, CSS3, JavaScript',
+  },
+  {
+    name: 'AI Technologies',
+    icon: Cloud, // You can use a more specific AI icon if available
+    description: 'OpenAI API, LangChain, HuggingFace, TensorFlow, Generative AI',
   },
   {
     name: 'Blockchain',

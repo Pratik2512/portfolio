@@ -1,0 +1,7 @@
+<svg width="400" height="240" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="240" rx="24" fill="#f3f4f6"/>
+  <g opacity="0.6">
+    <circle cx="200" cy="120" r="56" stroke="#a5b4fc" stroke-width="4" fill="#e0e7ff"/>
+    <text x="200" y="128" text-anchor="middle" fill="#6366f1" font-size="28" font-family="Arial, Helvetica, sans-serif">Sharing</text>
+  </g>
+</svg>

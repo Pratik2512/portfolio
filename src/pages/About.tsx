@@ -17,19 +17,16 @@ const About = () => {
               With a strong foundation in both backend and frontend technologies, I enjoy creating scalable, efficient solutions that solve real-world problems. My experience spans from developing APIs to implementing database solutions, always keeping user needs and performance in mind.
             </p>
             
-            <div className="mt-6 space-y-3 text-muted-foreground">
-              <div className="flex items-center">
-                <Building size={18} className="mr-2" />
-                <span>Backend Engineer at Sodales Solutions</span>
-              </div>
-              <div className="flex items-center">
-                <MapPin size={18} className="mr-2" />
-                <span>Based in Pune, India</span>
-              </div>
-              <div className="flex items-center">
-                <Calendar size={18} className="mr-2" />
-                <span>1.5+ years of professional experience</span>
-              </div>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold text-sm shadow">
+                <Building size={18} /> Backend Engineer at Sodales Solutions
+              </span>
+              <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-blue-500/90 text-white font-semibold text-sm shadow">
+                <MapPin size={18} /> Pune, India
+              </span>
+              <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-green-600/80 text-white font-semibold text-sm shadow">
+                <Calendar size={18} /> 1.5+ years experience
+              </span>
             </div>
           </div>
           
@@ -37,16 +34,34 @@ const About = () => {
             <h2 className="text-2xl font-semibold mb-6">Technical Skills</h2>
             <SkillsGrid />
           </div>
-          
+
           <div className="mb-16">
-            <h2 className="text-2xl font-semibold mb-6">Professional Experience</h2>
-            
-            <div className="space-y-8">
-              <div className="p-6 rounded-lg border border-border">
+            <h2 className="text-2xl font-semibold mb-6 text-primary drop-shadow">Achievements</h2>
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="flex-1 bg-gradient-to-r from-yellow-200 via-yellow-50 to-yellow-100 rounded-xl shadow p-6 border border-yellow-300">
+                <h3 className="text-lg font-bold text-yellow-900 mb-2">DPU Academic Topper 2024</h3>
+                <p className="text-yellow-800">Awarded for outstanding academic performance at Dr. D.Y. Patil Vidyapeeth, Pune.</p>
+              </div>
+              <div className="flex-1 bg-gradient-to-r from-blue-200 via-blue-50 to-blue-100 rounded-xl shadow p-6 border border-blue-300">
+                <h3 className="text-lg font-bold text-blue-900 mb-2">State Level Inter School Essay Writing Competition Winner 2016</h3>
+                <p className="text-blue-800">Secured first place at the Maharashtra State level for essay writing organized by the Yashwnatrao Chavan Vidyapeeth Mumbai.</p>
+              </div>
+              <div className="flex-1 bg-gradient-to-r from-green-200 via-green-50 to-green-100 rounded-xl shadow p-6 border border-green-300">
+                <h3 className="text-lg font-bold text-green-900 mb-2">Quick Heal Cyber Warrior</h3>
+                <p className="text-green-800">Created cyber-awareness among 5,000+ students as part of a national initiative.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mb-20">
+            <h2 className="text-3xl font-extrabold mb-10 text-primary drop-shadow-lg">Professional Experience</h2>
+            <div className="relative border-l-4 border-primary/30 pl-8 space-y-12">
+              <div className="relative bg-white/80 dark:bg-card/90 p-6 rounded-xl shadow-md border border-border">
+                <span className="absolute -left-5 top-6 w-4 h-4 bg-primary rounded-full border-4 border-background"></span>
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-medium">Backend Engineer</h3>
-                    <p className="text-primary font-medium">Sodales Solutions</p>
+                    <h3 className="text-xl font-bold">Backend Engineer</h3>
+                    <p className="text-primary font-semibold">Sodales Solutions</p>
                   </div>
                   <div className="text-muted-foreground text-sm mt-2 md:mt-0">
                     April 2024 - Present

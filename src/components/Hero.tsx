@@ -1,7 +1,8 @@
-
 import React from 'react';
-import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Download, Mail } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { SiX, SiLinkedin, SiGithub } from 'react-icons/si';
+import { HiOutlineMail } from 'react-icons/hi'; 
 
 const Hero = () => {
   return (
@@ -58,15 +59,7 @@ const Hero = () => {
         </div>
         
         <div className="flex justify-center items-center gap-8 pt-8">
-          <a
-            href="mailto:pratikmohite2512@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-white/80 hover:bg-primary/90 p-3 shadow transition-colors border border-border"
-            title="Email"
-          >
-            <Mail size={22} className="text-primary" />
-          </a>
+          
           <a
             href="https://github.com/Pratik2512"
             target="_blank"
@@ -74,7 +67,7 @@ const Hero = () => {
             className="rounded-full p-2.5 bg-muted/50 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
             aria-label="GitHub"
           >
-            <Github size={24} />
+            <SiGithub size={24} />
           </a>
           <a
             href="https://www.linkedin.com/in/pratikmohite2512/"
@@ -83,14 +76,23 @@ const Hero = () => {
             className="rounded-full p-2.5 bg-muted/50 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
             aria-label="LinkedIn"
           >
-            <Linkedin size={24} />
+            <SiLinkedin size={24} />
           </a>
           <a
             href="mailto:pratikmm010@gmail.com"
             className="rounded-full p-2.5 bg-muted/50 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
             aria-label="Email"
           >
-            <Mail size={24} />
+            <HiOutlineMail size={24} />
+          </a>
+          <a
+            href="https://x.com/0xPratik010"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full p-2.5 bg-muted/50 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
+            aria-label="X"
+          >
+            <SiX size={24} />
           </a>
         </div>
       </div>

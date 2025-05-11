@@ -1,35 +1,42 @@
 import React from 'react';
 import SkillsGrid from '../components/SkillsGrid';
+import TechFloaters from '../components/TechFloaters';
 import { ArrowRight, Calendar, MapPin, Building } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
     <div className="min-h-screen pt-20">
-      <section className="section-padding">
+      <section className="section-padding relative">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-12 max-w-3xl">
-            <h1 className="text-3xl font-bold mb-6">About Me</h1>
-            <p className="text-lg text-muted-foreground mb-4">
-              I'm Pratik Mohite, a passionate backend engineer currently working at Sodales Solutions, where I focus on building robust systems with SAP HANA, XSODATA, XSJS services, RESTful APIs, and authentication management.
-            </p>
-            <p className="text-lg text-muted-foreground">
-              With a strong foundation in both backend and frontend technologies, I enjoy creating scalable, efficient solutions that solve real-world problems. My experience spans from developing APIs to implementing database solutions, always keeping user needs and performance in mind.
-            </p>
-            
-            <div className="mt-8 flex flex-wrap gap-4">
-              <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold text-sm shadow">
-                <Building size={18} /> Backend Engineer at Sodales Solutions
-              </span>
-              <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-blue-500/90 text-white font-semibold text-sm shadow">
-                <MapPin size={18} /> Pune, India
-              </span>
-              <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-green-600/80 text-white font-semibold text-sm shadow">
-                <Calendar size={18} /> 1.5+ years experience
-              </span>
+          <div className="flex flex-col md:flex-row relative">
+            {/* Left: About text */}
+            <div className="mb-12 max-w-3xl z-10">
+              <h1 className="text-3xl font-bold mb-6">About Me</h1>
+              <p className="text-lg text-muted-foreground mb-4">
+                I'm Pratik Mohite, a passionate backend engineer currently working at Sodales Solutions, where I focus on building robust systems with SAP HANA, XSODATA, XSJS services, RESTful APIs, and authentication management.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                With a strong foundation in both backend and frontend technologies, I enjoy creating scalable, efficient solutions that solve real-world problems. My experience spans from developing APIs to implementing database solutions, always keeping user needs and performance in mind.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold text-sm shadow">
+                  <Building size={18} /> Backend Engineer at Sodales Solutions
+                </span>
+                <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-blue-500/90 text-white font-semibold text-sm shadow">
+                  <MapPin size={18} /> Pune, India
+                </span>
+                <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-green-600/80 text-white font-semibold text-sm shadow">
+                  <Calendar size={18} /> 1.5+ years experience
+                </span>
+              </div>
+            </div>
+            {/* Right: Floating tech icons */}
+            <div className="hidden md:block flex-1 relative h-[340px]">
+              {/* <TechFloaters /> */}
             </div>
           </div>
-          
+
           <div className="mb-16">
             <h2 className="text-2xl font-semibold mb-6">Technical Skills</h2>
             <SkillsGrid />

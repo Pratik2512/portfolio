@@ -1,24 +1,24 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProjectCard from '../components/ProjectCard';
 
-const allProjects = [
+export const allProjects = [
   {
     title: 'Sharing App',
     description: 'A platform for sharing educational content, allowing students and educators to collaborate effectively.',
     technologies: ['Node.js', 'Express', 'MongoDB', 'React'],
     demoUrl: 'https://tybca.netlify.app',
     githubUrl: 'https://github.com/Pratik2512/SharingSite',
-    imageUrl: '/screenshots/sharing-app.png',
+    imageUrl: 'https://iad.microlink.io/nD50IyesCZZ7rr1UlruMqrBMBHXzuIpMPiow2zjTuIGkHTvuFjwENnK0JZd1312sZeCW_5xoJ9deYLGxoy_Dvw.png',
     featured: true,
     category: 'frontend',
   },
   {
-    title: 'CollabBridge Tech',
+    title: 'CollabCraze Tech',
     description: 'A client project built for seamless business collaboration, featuring real-time communication and data sharing.',
     technologies: ['React', 'Node.js', 'WebSockets', 'AWS'],
-    demoUrl: 'https://example.com',
-    imageUrl: '/screenshots/collabbridge.png',
+    demoUrl: 'https://collabcraze1.vercel.app',
+    githubUrl: 'https://github.com/Pratik2512/collabbridge-tech',
+    imageUrl: 'https://iad.microlink.io/cfVrv7nXNelew2uBm5AIzFlPsbjCHDklI4UOL2qgcZv-yCrXQgrxELVU5qVquUwrGGm3s5PJunK4XyVFZIezQQ.png',
     featured: true,
     category: 'fullstack',
   },
@@ -28,7 +28,7 @@ const allProjects = [
     technologies: ['Socket.io', 'Express', 'MongoDB', 'React'],
     demoUrl: 'https://collabcraze.vercel.app',
     githubUrl: 'https://github.com/Pratik2512/CommunityChat',
-    imageUrl: '/screenshots/community-chat.png',
+    imageUrl: 'https://iad.microlink.io/ikP9_blvz0QesdaUzdUQV297x_IvOdO9W7JOFFNBc1c3ibeXFoYBOCo26l_EeJdDh5FHyGr8nbCuLRJduD7z7A.png',
     featured: true,
     category: 'fullstack',
   },
@@ -39,7 +39,7 @@ const allProjects = [
     demoUrl: '',
     githubUrl: 'https://github.com/Pratik2512/SeoInspector',
     imageUrl: '/screenshots/seoinspector.png',
-    featured: true,
+    featured: false,
     category: 'fullstack',
   },
   {
@@ -49,7 +49,7 @@ const allProjects = [
     demoUrl: '',
     githubUrl: 'https://github.com/0xpratik010/ProjectPilotAI',
     imageUrl: '/screenshots/projectpilotai.png',
-    featured: true,
+    featured: false,
     category: 'fullstack',
   },
   // {
@@ -94,7 +94,33 @@ type CategoryType = 'all' | 'frontend' | 'backend' | 'fullstack';
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState<CategoryType>('all');
-  
+  // State to store screenshot URLs fetched from Microlink
+  const [microlinkScreenshots, setMicrolinkScreenshots] = useState<{ [title: string]: string }>({});
+
+  useEffect(() => {
+    // Fetch screenshots for projects with demoUrl
+    const fetchScreenshots = async () => {
+      const updates: { [title: string]: string } = {};
+      await Promise.all(
+        allProjects.map(async (project) => {
+          if (project.demoUrl) {
+            try {
+              const res = await fetch(`https://api.microlink.io/?url=$project.demoUrl&screenshot=true`);
+              const json = await res.json();
+              if (json?.status === 'success' && json?.data?.screenshot?.url) {
+                updates[project.title] = json.data.screenshot.url;
+              }
+            } catch (e) {
+              // Ignore errors, fallback will be used
+            }
+          }
+        })
+      );
+      setMicrolinkScreenshots(updates);
+    };
+    fetchScreenshots();
+  }, []);
+
   const filteredProjects = activeCategory === 'all' 
     ? allProjects 
     : allProjects.filter(project => project.category === activeCategory);
@@ -135,16 +161,35 @@ const Projects = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredProjects.map((project) => (
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                description={project.description}
-                technologies={project.technologies}
-                demoUrl={project.demoUrl}
-                githubUrl={project.githubUrl}
-              />
-            ))}
+            {filteredProjects.map((project) => {
+              // Use Microlink screenshot if available, else fallback to static image or empty image
+              const screenshotUrl = microlinkScreenshots[project.title] || project.imageUrl || '/empty-project.png';
+              if(project.demoUrl == ''){
+                return (
+                  <ProjectCard
+                    key={project.title}
+                    title={project.title}
+                    description={project.description}
+                    technologies={project.technologies}
+                    demoUrl={project.demoUrl}
+                    githubUrl={project.githubUrl}
+                    featured={project.featured}
+                  />
+                )
+              }
+              return (
+                <ProjectCard
+                  key={project.title}
+                  title={project.title}
+                  description={project.description}
+                  technologies={project.technologies}
+                  demoUrl={project.demoUrl}
+                  githubUrl={project.githubUrl}
+                  imageUrl={project.imageUrl}
+                  featured={project.featured}
+                />
+              );
+            })}
           </div>
           
           {filteredProjects.length === 0 && (

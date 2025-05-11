@@ -2,6 +2,7 @@
 
 Welcome to my personal developer portfolio! 🚀  
 Check this out at: (https://pratik-mohite.netlify.app/)
+
 This project showcases my skills, projects, achievements, and certifications as a software developer.
 
 ## 🌟 Features

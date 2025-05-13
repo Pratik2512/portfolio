@@ -2,7 +2,8 @@ import React from 'react';
 import { ArrowRight, Download, Mail } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { SiX, SiLinkedin, SiGithub } from 'react-icons/si';
-import { HiOutlineMail } from 'react-icons/hi'; 
+import { HiOutlineMail } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -49,13 +50,13 @@ const Hero = () => {
             Resume
           </a>
           
-          <a 
-            href="/about" 
+          <Link 
+            to="/about" 
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-primary bg-secondary hover:bg-primary/20 hover:border-secondary hover:scale-105 transition-all duration-200"
           >
             Learn More
             <ArrowRight size={18} />
-          </a>
+          </Link>
         </div>
         
         <div className="flex justify-center items-center gap-8 pt-8">

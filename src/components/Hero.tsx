@@ -41,7 +41,7 @@ const Hero = () => {
         
         <div className="flex flex-wrap justify-center gap-4 pt-4">
           <a 
-            href="/resume.pdf" 
+            href="https://miniature-pot-122.notion.site/ebd/1f2271645b2b80648d8ce96ad254a23a" 
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/80 hover:scale-105 shadow-lg transition-all duration-200"
@@ -54,7 +54,7 @@ const Hero = () => {
             to="/about" 
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-primary bg-secondary hover:bg-primary/20 hover:border-secondary hover:scale-105 transition-all duration-200"
           >
-            Learn More
+              Learn More
             <ArrowRight size={18} />
           </Link>
         </div>

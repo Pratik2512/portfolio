@@ -46,7 +46,7 @@ export const allProjects = [
     title: 'Project Tracker',
     description: 'An Enterprise-level Project Management Tool with Analytics and Report Generation along with Gen-AI Integration.',
     technologies: ['Express', 'Neon DB', 'React Charts', 'React', 'Replit', 'OpenAI API', 'Hugging Face API', 'Axios'],
-    demoUrl: '',
+    demoUrl: 'https://projectpilotai.onrender.com/',
     githubUrl: 'https://github.com/0xpratik010/ProjectPilotAI',
     imageUrl: '/screenshots/projectpilotai.png',
     featured: false,

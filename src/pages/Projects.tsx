@@ -48,7 +48,7 @@ export const allProjects = [
     technologies: ['Express', 'Neon DB', 'React Charts', 'React', 'Replit', 'OpenAI API', 'Hugging Face API', 'Axios'],
     demoUrl: 'https://projectpilotai.onrender.com/',
     githubUrl: 'https://github.com/0xpratik010/ProjectPilotAI',
-    imageUrl: '/screenshots/projectpilotai.png',
+    imageUrl: 'https://iad.microlink.io/L5pQt_g1cHHVCK5Dazi4tLrmM1fXHqOsb3rUraeGcjH-CZcYBcAqPbaZZ5VxArylHjKIqgM5kb9PXPXcDEoNWw.png',
     featured: false,
     category: 'fullstack',
   },
